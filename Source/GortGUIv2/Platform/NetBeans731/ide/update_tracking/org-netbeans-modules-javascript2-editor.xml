@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.javascript2.editor/1">
+    <module_version install_time="1370465354477" last="true" origin="installer" specification_version="0.4.3">
+        <file crc="558913452" name="config/Modules/org-netbeans-modules-javascript2-editor.xml"/>
+        <file crc="3129083012" name="docs/jquery-api.xml"/>
+        <file crc="1955550232" name="jsstubs/corestubs.zip"/>
+        <file crc="1799933558" name="jsstubs/domstubs.zip"/>
+        <file crc="3117609565" name="jsstubs/reststubs.zip"/>
+        <file crc="4030159117" name="modules/locale/org-netbeans-modules-javascript2-editor_ja.jar"/>
+        <file crc="3584588812" name="modules/locale/org-netbeans-modules-javascript2-editor_pt_BR.jar"/>
+        <file crc="1821903790" name="modules/locale/org-netbeans-modules-javascript2-editor_ru.jar"/>
+        <file crc="2907152536" name="modules/locale/org-netbeans-modules-javascript2-editor_zh_CN.jar"/>
+        <file crc="2700813576" name="modules/org-netbeans-modules-javascript2-editor.jar"/>
+    </module_version>
+</module>

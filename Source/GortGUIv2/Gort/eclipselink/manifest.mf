@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.eclipse.persistence
+OpenIDE-Module-Localizing-Bundle: org/eclipse/persistence/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

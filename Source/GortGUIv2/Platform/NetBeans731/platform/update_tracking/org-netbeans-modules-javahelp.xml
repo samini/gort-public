@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.netbeans.modules.javahelp/1">
+    <module_version install_time="1370463763439" last="false" origin="installer" specification_version="2.30.1">
+        <file crc="3126457443" name="config/Modules/org-netbeans-modules-javahelp.xml"/>
+        <file crc="3125108413" name="modules/ext/jhall-2.0_05.jar"/>
+        <file crc="345607673" name="modules/locale/org-netbeans-modules-javahelp_ja.jar"/>
+        <file crc="1858892998" name="modules/locale/org-netbeans-modules-javahelp_pt_BR.jar"/>
+        <file crc="1403074047" name="modules/locale/org-netbeans-modules-javahelp_ru.jar"/>
+        <file crc="366433496" name="modules/locale/org-netbeans-modules-javahelp_zh_CN.jar"/>
+        <file crc="466130016" name="modules/org-netbeans-modules-javahelp.jar"/>
+    </module_version>
+    <module_version install_time="1374609696628" last="true" origin="Python Plugin" specification_version="2.33">
+        <file crc="3126457443" name="config/Modules/org-netbeans-modules-javahelp.xml"/>
+        <file crc="3125108413" name="modules/ext/jhall-2.0_05.jar"/>
+        <file crc="2654851837" name="modules/org-netbeans-modules-javahelp.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<QuestionForm xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2005-10-01/QuestionForm.xsd">
+    <Overview>
+        <Text>
+            This task requires that you own and use an Android smartphone. You should have experience installing and running applications on your smartphone.
+        </Text>
+    </Overview>
+    <Question>
+        <QuestionIdentifier>AndroidVersion</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+                <p>1. What version of Android do you run on your device? To find the version of Android on your device, go to <b>Settings</b> on your phone. Select <b>About phone</b>. The Android version is displayed as one of the items on the screen. If you use more than one Android smartphone, please enter the version for the device you use most often.</p>
+            ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <FreeTextAnswer>
+                <Constraints>
+                    <Length minLength="2" maxLength="10" />
+                </Constraints>
+                <DefaultText></DefaultText>
+                <NumberOfLinesSuggestion>1</NumberOfLinesSuggestion>
+            </FreeTextAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Overview>
+        <FormattedContent><![CDATA[
+            <p>Please read the application description carefully, look at the application screenshots, and answer the questions below.</p>
+            <p><b>App Name:</b> $appname</p>
+            <p>$description</p>
+            <p><img alt="" border="1" src="$screenshot0" /><img alt="" border="1" src="$screenshot1" hspace="30" /></p>
+        ]]></FormattedContent>
+    </Overview>
+    <Question>
+        <QuestionIdentifier>UsedApp</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>2. Have you used this app before?</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+        <SelectionAnswer>
+            <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                  <Selection>
+                    <SelectionIdentifier>Yes</SelectionIdentifier>
+                    <Text>Yes</Text>
+                  </Selection>
+                  <Selection>
+                    <SelectionIdentifier>No</SelectionIdentifier>
+                    <Text>No</Text>
+                  </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>AppType</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <Text>3. What category do you think this mobile app should belong to?</Text>
+        </QuestionContent>
+        <AnswerSpecification>
+        <SelectionAnswer>
+            <StyleSuggestion>radiobutton</StyleSuggestion>
+                <Selections>
+                  <Selection>
+                    <SelectionIdentifier>GameApplication</SelectionIdentifier>
+                    <Text>Game application</Text>
+                  </Selection>
+                  <Selection>
+                    <SelectionIdentifier>NonGameApplication</SelectionIdentifier>
+                    <Text>Non-game application</Text>
+                  </Selection>
+                  <Selection>
+                    <SelectionIdentifier>Content</SelectionIdentifier>
+                    <Text>Book, music, or video</Text>
+                  </Selection>
+                </Selections>
+            </SelectionAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Overview>
+        <FormattedContent><![CDATA[
+            <p>Suppose you have installed and are using $appname on your Android smartphone. You just went through the following two screens on your device, starting with the screen on the left.</p>
+            <p><img alt="" border="1" src="$screenshot2" /><img alt="" border="1" src="$screenshot3" hspace="30" /></p>
+        ]]></FormattedContent>
+    </Overview>
+    <Question>
+        <QuestionIdentifier>IntendedTask</QuestionIdentifier>
+        <IsRequired>true</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+                <p>4. What task were you trying to accomplish <b>over the course of the above two screens</b>? (examples: search for friends, share a link, take notes, play a game)</p>
+            ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <FreeTextAnswer>
+                <Constraints>
+                    <Length minLength="3" />
+                </Constraints>
+                <DefaultText></DefaultText>
+                <NumberOfLinesSuggestion>1</NumberOfLinesSuggestion>
+            </FreeTextAnswer>
+        </AnswerSpecification>
+    </Question>
+    <Question>
+        <QuestionIdentifier>Comments</QuestionIdentifier>
+        <IsRequired>false</IsRequired>
+        <QuestionContent>
+            <FormattedContent><![CDATA[
+                <p>5. Please provide any other comments you may. We appreciate your input!</p>
+            ]]></FormattedContent>
+        </QuestionContent>
+        <AnswerSpecification>
+            <FreeTextAnswer>
+                <DefaultText></DefaultText>
+                <NumberOfLinesSuggestion>1</NumberOfLinesSuggestion>
+            </FreeTextAnswer>
+        </AnswerSpecification>
+    </Question>
+</QuestionForm>

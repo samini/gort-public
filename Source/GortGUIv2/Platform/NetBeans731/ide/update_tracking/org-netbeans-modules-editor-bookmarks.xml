@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.editor.bookmarks/1">
+    <module_version install_time="1370464587020" last="true" origin="installer" specification_version="1.27.1">
+        <file crc="3233569121" name="config/Modules/org-netbeans-modules-editor-bookmarks.xml"/>
+        <file crc="2915681025" name="modules/locale/org-netbeans-modules-editor-bookmarks_ja.jar"/>
+        <file crc="1711210893" name="modules/locale/org-netbeans-modules-editor-bookmarks_pt_BR.jar"/>
+        <file crc="592297538" name="modules/locale/org-netbeans-modules-editor-bookmarks_ru.jar"/>
+        <file crc="2720405008" name="modules/locale/org-netbeans-modules-editor-bookmarks_zh_CN.jar"/>
+        <file crc="1974573051" name="modules/org-netbeans-modules-editor-bookmarks.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.gototest/1">
+    <module_version install_time="1370463818041" last="true" origin="installer" specification_version="1.21.1">
+        <file crc="1907751588" name="config/Modules/org-netbeans-modules-gototest.xml"/>
+        <file crc="2744264263" name="modules/locale/org-netbeans-modules-gototest_ja.jar"/>
+        <file crc="3397215875" name="modules/locale/org-netbeans-modules-gototest_pt_BR.jar"/>
+        <file crc="263733174" name="modules/locale/org-netbeans-modules-gototest_ru.jar"/>
+        <file crc="821868077" name="modules/locale/org-netbeans-modules-gototest_zh_CN.jar"/>
+        <file crc="1353688909" name="modules/org-netbeans-modules-gototest.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.cmuchimps.gort.modules.helper
+OpenIDE-Module-Localizing-Bundle: org/cmuchimps/gort/modules/helper/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

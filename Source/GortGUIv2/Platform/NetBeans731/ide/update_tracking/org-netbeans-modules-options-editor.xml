@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.options.editor/1">
+    <module_version install_time="1370464454677" last="true" origin="installer" specification_version="1.37.1">
+        <file crc="3367560768" name="config/ModuleAutoDeps/org-netbeans-modules-options-editor.xml"/>
+        <file crc="3699321809" name="config/Modules/org-netbeans-modules-options-editor.xml"/>
+        <file crc="1764460213" name="modules/locale/org-netbeans-modules-options-editor_ja.jar"/>
+        <file crc="878465192" name="modules/locale/org-netbeans-modules-options-editor_pt_BR.jar"/>
+        <file crc="1211031961" name="modules/locale/org-netbeans-modules-options-editor_ru.jar"/>
+        <file crc="1444061951" name="modules/locale/org-netbeans-modules-options-editor_zh_CN.jar"/>
+        <file crc="3521483626" name="modules/org-netbeans-modules-options-editor.jar"/>
+    </module_version>
+</module>

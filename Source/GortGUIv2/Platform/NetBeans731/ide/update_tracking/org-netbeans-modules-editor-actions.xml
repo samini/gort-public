@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.editor.actions/1">
+    <module_version install_time="1370463647993" last="true" origin="installer" specification_version="1.18.1.40">
+        <file crc="992536293" name="config/Modules/org-netbeans-modules-editor-actions.xml"/>
+        <file crc="2151774845" name="modules/locale/org-netbeans-modules-editor-actions_ja.jar"/>
+        <file crc="761073256" name="modules/locale/org-netbeans-modules-editor-actions_pt_BR.jar"/>
+        <file crc="1383503703" name="modules/locale/org-netbeans-modules-editor-actions_ru.jar"/>
+        <file crc="2812318383" name="modules/locale/org-netbeans-modules-editor-actions_zh_CN.jar"/>
+        <file crc="387104463" name="modules/org-netbeans-modules-editor-actions.jar"/>
+    </module_version>
+</module>

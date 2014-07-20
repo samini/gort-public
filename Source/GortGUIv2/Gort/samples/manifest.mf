@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.cmuchimps.gort.modules.samples
+OpenIDE-Module-Install: org/cmuchimps/gort/modules/samples/Installer.class
+OpenIDE-Module-Layer: org/cmuchimps/gort/modules/samples/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/cmuchimps/gort/modules/samples/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

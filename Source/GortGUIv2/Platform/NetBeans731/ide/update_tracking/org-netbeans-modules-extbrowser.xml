@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.extbrowser/1">
+    <module_version install_time="1370465376221" last="true" origin="installer" specification_version="1.34.2">
+        <file crc="1411316007" name="config/Modules/org-netbeans-modules-extbrowser.xml"/>
+        <file crc="3513992934" name="modules/lib/extbrowser.dll"/>
+        <file crc="2616869923" name="modules/lib/extbrowser64.dll"/>
+        <file crc="3880069603" name="modules/lib/netbeans-chrome-connector.crx"/>
+        <file crc="3589109504" name="modules/locale/org-netbeans-modules-extbrowser_ja.jar"/>
+        <file crc="498265719" name="modules/locale/org-netbeans-modules-extbrowser_pt_BR.jar"/>
+        <file crc="3002317702" name="modules/locale/org-netbeans-modules-extbrowser_ru.jar"/>
+        <file crc="2622706949" name="modules/locale/org-netbeans-modules-extbrowser_zh_CN.jar"/>
+        <file crc="3528476873" name="modules/org-netbeans-modules-extbrowser.jar"/>
+    </module_version>
+</module>

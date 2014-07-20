@@ -1,0 +1,10 @@
+include debian/control
+include debian/copyright
+include debian/rules
+include debian/compat
+include debian/changelog
+include GNUmakefile
+include MANIFEST.in
+include LICENCE
+include README*pdf
+include README*html

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.libs.freemarker/1">
+    <module_version install_time="1370463293065" last="true" origin="installer" specification_version="2.22.1.238">
+        <file crc="637450760" name="config/Modules/org-netbeans-libs-freemarker.xml"/>
+        <file crc="2391697054" name="modules/ext/freemarker-2.3.8.jar"/>
+        <file crc="2145211989" name="modules/locale/org-netbeans-libs-freemarker_ja.jar"/>
+        <file crc="3812781628" name="modules/locale/org-netbeans-libs-freemarker_pt_BR.jar"/>
+        <file crc="579820303" name="modules/locale/org-netbeans-libs-freemarker_ru.jar"/>
+        <file crc="3883279944" name="modules/locale/org-netbeans-libs-freemarker_zh_CN.jar"/>
+        <file crc="2746533344" name="modules/org-netbeans-libs-freemarker.jar"/>
+    </module_version>
+</module>

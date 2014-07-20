@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.cmuchimps.gort.modules.pythonscripts
+OpenIDE-Module-Install: org/cmuchimps/gort/modules/pythonscripts/Installer.class
+OpenIDE-Module-Layer: org/cmuchimps/gort/modules/pythonscripts/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/cmuchimps/gort/modules/pythonscripts/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

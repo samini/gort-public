@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.refactoring.java/1">
+    <module_version install_time="1370465505343" last="true" origin="installer" specification_version="1.41.4.1">
+        <file crc="2520383529" name="config/Modules/org-netbeans-modules-refactoring-java.xml"/>
+        <file crc="3980614201" name="modules/locale/org-netbeans-modules-refactoring-java_ja.jar"/>
+        <file crc="4109685194" name="modules/locale/org-netbeans-modules-refactoring-java_pt_BR.jar"/>
+        <file crc="2004409725" name="modules/locale/org-netbeans-modules-refactoring-java_ru.jar"/>
+        <file crc="2122316408" name="modules/locale/org-netbeans-modules-refactoring-java_zh_CN.jar"/>
+        <file crc="1397517395" name="modules/org-netbeans-modules-refactoring-java.jar"/>
+    </module_version>
+</module>

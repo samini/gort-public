@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.maven.grammar/1">
+    <module_version install_time="1370465080322" last="true" origin="installer" specification_version="1.30.2.1">
+        <file crc="1893164468" name="config/Modules/org-netbeans-modules-maven-grammar.xml"/>
+        <file crc="749131455" name="modules/locale/org-netbeans-modules-maven-grammar_ja.jar"/>
+        <file crc="4261417708" name="modules/locale/org-netbeans-modules-maven-grammar_pt_BR.jar"/>
+        <file crc="568215332" name="modules/locale/org-netbeans-modules-maven-grammar_ru.jar"/>
+        <file crc="2393248131" name="modules/locale/org-netbeans-modules-maven-grammar_zh_CN.jar"/>
+        <file crc="369576018" name="modules/org-netbeans-modules-maven-grammar.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.libs.javacapi">
+    <module_version install_time="1370462386123" last="true" origin="installer" specification_version="7.13.1.3">
+        <file crc="3672542447" name="config/Modules/org-netbeans-libs-javacapi.xml"/>
+        <file crc="2950466080" name="modules/ext/nb-javac-api.jar"/>
+        <file crc="1717095494" name="modules/locale/org-netbeans-libs-javacapi_ja.jar"/>
+        <file crc="1497547861" name="modules/locale/org-netbeans-libs-javacapi_pt_BR.jar"/>
+        <file crc="2804860391" name="modules/locale/org-netbeans-libs-javacapi_ru.jar"/>
+        <file crc="3475891983" name="modules/locale/org-netbeans-libs-javacapi_zh_CN.jar"/>
+        <file crc="2909918649" name="modules/org-netbeans-libs-javacapi.jar"/>
+    </module_version>
+</module>

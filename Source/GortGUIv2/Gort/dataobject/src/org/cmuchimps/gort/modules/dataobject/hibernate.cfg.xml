@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <!-- a SessionFactory instance listed as /jndi/name -->
+<!--    <session-factory
+        name="java:hibernate/SessionFactory">-->
+<!--    The above line gave an error when creating the hibernate entity manager
+    dynamically. Problem fixed by removing the name property.-->
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <!--<property name"connection.url"></property>-->
+        <property name="connection.username">gort</property>
+        <property name="connection.password"></property>
+        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <property name="transaction.factory_class">
+            org.hibernate.transaction.JTATransactionFactory
+        </property>
+        
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        
+        <!-- If not already there, create the database schema for us -->
+        <!--<property name="hbm2ddl.auto">update</property>-->
+
+        <!-- mapping files -->
+<!--        <mapping resource="org/hibernate/auction/Item.hbm.xml"/>
+        <mapping resource="org/hibernate/auction/Bid.hbm.xml"/>-->
+
+        <!-- cache settings -->
+<!--        <class-cache class="org.hibernate.auction.Item" usage="read-write"/>
+        <class-cache class="org.hibernate.auction.Bid" usage="read-only"/>
+        <collection-cache collection="org.hibernate.auction.Item.bids" usage="read-write"/>-->
+
+    </session-factory>
+
+</hibernate-configuration>

@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.cmuchimps.gort.modules.crowdanalysis
+OpenIDE-Module-Install: org/cmuchimps/gort/modules/crowdanalysis/Installer.class
+OpenIDE-Module-Layer: org/cmuchimps/gort/modules/crowdanalysis/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/cmuchimps/gort/modules/crowdanalysis/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

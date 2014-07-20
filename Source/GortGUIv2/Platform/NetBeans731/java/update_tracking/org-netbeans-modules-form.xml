@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.form/2">
+    <module_version install_time="1370464058226" last="true" origin="installer" specification_version="1.46.2.4">
+        <file crc="2061491584" name="config/Modules/org-netbeans-modules-form.xml"/>
+        <file crc="3122524292" name="modules/ext/AbsoluteLayout.jar"/>
+        <file crc="3534577904" name="modules/locale/org-netbeans-modules-form_ja.jar"/>
+        <file crc="2772623955" name="modules/locale/org-netbeans-modules-form_pt_BR.jar"/>
+        <file crc="2523320079" name="modules/locale/org-netbeans-modules-form_ru.jar"/>
+        <file crc="3348182253" name="modules/locale/org-netbeans-modules-form_zh_CN.jar"/>
+        <file crc="1674212495" name="modules/org-netbeans-modules-form.jar"/>
+        <file crc="3022427873" name="sources/org/netbeans/lib/awtextra/AbsoluteConstraints.java"/>
+        <file crc="2059909733" name="sources/org/netbeans/lib/awtextra/AbsoluteLayout.java"/>
+        <file crc="3519667398" name="sources/readme.txt"/>
+    </module_version>
+</module>

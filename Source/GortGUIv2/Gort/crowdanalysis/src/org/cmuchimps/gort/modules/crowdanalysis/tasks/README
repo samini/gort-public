@@ -1,0 +1,15 @@
+Questions for tasks are based on HTMLQuestion. An implementation based on QuestionForm
+was also attempted. However, QuestionForm is limiting with respect to presentation
+of questions. HTMLQuestion is based on:
+http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_HTMLQuestionArticle.html
+
+Creating questions based on a .question file:
+http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_QuestionFormDataStructureArticle.html
+
+Input files have to be tab delimited rather than comma separated.
+
+Review policies can be used to automatically score an assignment or check agreement
+on several answers to a hit:
+http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_ReviewPoliciesArticle.html
+http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_AssignmentReviewPolicies.html
+http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_HITReviewPolicies.html

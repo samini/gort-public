@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.autoupdate.pluginimporter">
+    <module_version install_time="1370464167370" last="true" origin="installer" specification_version="1.8.2">
+        <file crc="2803260829" name="config/Modules/org-netbeans-modules-autoupdate-pluginimporter.xml"/>
+        <file crc="2132521339" name="modules/locale/org-netbeans-modules-autoupdate-pluginimporter_ja.jar"/>
+        <file crc="3784046942" name="modules/locale/org-netbeans-modules-autoupdate-pluginimporter_pt_BR.jar"/>
+        <file crc="3042076768" name="modules/locale/org-netbeans-modules-autoupdate-pluginimporter_ru.jar"/>
+        <file crc="1631123031" name="modules/locale/org-netbeans-modules-autoupdate-pluginimporter_zh_CN.jar"/>
+        <file crc="3403826561" name="modules/org-netbeans-modules-autoupdate-pluginimporter.jar"/>
+    </module_version>
+</module>

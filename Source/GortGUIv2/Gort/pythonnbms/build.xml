@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+<!-- for some information on what you could do (e.g. targets to override). -->
+<!-- If you delete this file and reopen the project it will be recreated. -->
+<project name="org.cmuchimps.gort.modules.pythonnbms" default="netbeans" basedir=".">
+    <description>Builds, tests, and runs the project org.cmuchimps.gort.modules.pythonnbms.</description>
+    <import file="nbproject/build-impl.xml"/>
+    
+    <property file="nbproject/suite.properties"/>
+    
+    <property name="nbm.update.dir" value="${suite.dir}/build/cluster/update/download"/>
+    
+    <!--Set value to enable or disable python support-->
+    <property name="pythonsupport" value="false" />
+    
+    <target name="clean" depends="netbeans-release-731,projectized-common.clean" />
+    
+    <!--Following can be used to check if the release is 7.3.1-->
+    <target name="check-release-version" if="${pythonsupport}">
+        <echo>Checking netbeans release version...</echo>
+        <condition property="release731">
+            <matches pattern="NetBeans.*7\.3\.1" string="${netbeans.productversion}" casesensitive="false"/>
+        </condition>
+    </target>
+    
+    <target name="netbeans-release-731" depends="check-release-version" if="release731">
+        <echo>Release ${netbeans.productversion}. Copying files...</echo>
+        <copy todir="${nbm.update.dir}">
+            <fileset dir="res/release731_fcs/"/>
+        </copy>
+    </target>
+</project>

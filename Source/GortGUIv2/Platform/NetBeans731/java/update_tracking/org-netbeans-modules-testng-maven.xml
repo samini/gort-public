@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.testng.maven">
+    <module_version install_time="1370466300674" last="true" origin="installer" specification_version="2.4.1">
+        <file crc="4087914038" name="config/Modules/org-netbeans-modules-testng-maven.xml"/>
+        <file crc="4023101540" name="modules/locale/org-netbeans-modules-testng-maven_ja.jar"/>
+        <file crc="3757748444" name="modules/locale/org-netbeans-modules-testng-maven_pt_BR.jar"/>
+        <file crc="3163555932" name="modules/locale/org-netbeans-modules-testng-maven_ru.jar"/>
+        <file crc="1680747454" name="modules/locale/org-netbeans-modules-testng-maven_zh_CN.jar"/>
+        <file crc="2789163447" name="modules/org-netbeans-modules-testng-maven.jar"/>
+    </module_version>
+</module>

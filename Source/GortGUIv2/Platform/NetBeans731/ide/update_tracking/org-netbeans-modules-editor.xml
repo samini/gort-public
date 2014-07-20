@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.editor/3">
+    <module_version install_time="1370463725797" last="true" origin="installer" specification_version="1.71.2.5.21.40">
+        <file crc="3066718341" name="config/ModuleAutoDeps/org-netbeans-modules-editor.xml"/>
+        <file crc="2401213403" name="config/Modules/org-netbeans-modules-editor.xml"/>
+        <file crc="375234795" name="modules/locale/org-netbeans-modules-editor_ja.jar"/>
+        <file crc="538701879" name="modules/locale/org-netbeans-modules-editor_pt_BR.jar"/>
+        <file crc="472630111" name="modules/locale/org-netbeans-modules-editor_ru.jar"/>
+        <file crc="2952750184" name="modules/locale/org-netbeans-modules-editor_zh_CN.jar"/>
+        <file crc="2799706258" name="modules/org-netbeans-modules-editor.jar"/>
+    </module_version>
+</module>

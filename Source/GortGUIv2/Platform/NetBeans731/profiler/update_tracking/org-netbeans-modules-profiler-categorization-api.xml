@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.profiler.categorization.api/1">
+    <module_version install_time="1370463344851" last="true" origin="installer" specification_version="1.7.1">
+        <file crc="2431759407" name="config/Modules/org-netbeans-modules-profiler-categorization-api.xml"/>
+        <file crc="3687840476" name="modules/locale/org-netbeans-modules-profiler-categorization-api_ja.jar"/>
+        <file crc="1777336777" name="modules/locale/org-netbeans-modules-profiler-categorization-api_pt_BR.jar"/>
+        <file crc="1819348304" name="modules/locale/org-netbeans-modules-profiler-categorization-api_ru.jar"/>
+        <file crc="1783153507" name="modules/locale/org-netbeans-modules-profiler-categorization-api_zh_CN.jar"/>
+        <file crc="422249996" name="modules/org-netbeans-modules-profiler-categorization-api.jar"/>
+    </module_version>
+</module>

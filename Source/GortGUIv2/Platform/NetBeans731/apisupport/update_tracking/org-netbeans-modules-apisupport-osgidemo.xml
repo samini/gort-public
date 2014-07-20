@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.apisupport.osgidemo">
+    <module_version install_time="1370463945874" last="true" origin="installer" specification_version="1.13.1">
+        <file crc="795404017" name="config/Modules/org-netbeans-modules-apisupport-osgidemo.xml"/>
+        <file crc="2909397594" name="modules/locale/org-netbeans-modules-apisupport-osgidemo_ja.jar"/>
+        <file crc="2096478402" name="modules/locale/org-netbeans-modules-apisupport-osgidemo_pt_BR.jar"/>
+        <file crc="602441240" name="modules/locale/org-netbeans-modules-apisupport-osgidemo_ru.jar"/>
+        <file crc="3385792136" name="modules/locale/org-netbeans-modules-apisupport-osgidemo_zh_CN.jar"/>
+        <file crc="639353618" name="modules/org-netbeans-modules-apisupport-osgidemo.jar"/>
+    </module_version>
+</module>

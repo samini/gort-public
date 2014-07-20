@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.cmuchimps.gort.modules.webinfoservice
+OpenIDE-Module-Install: org/cmuchimps/gort/modules/webinfoservice/Installer.class
+OpenIDE-Module-Layer: org/cmuchimps/gort/modules/webinfoservice/layer.xml
+OpenIDE-Module-Localizing-Bundle: org/cmuchimps/gort/modules/webinfoservice/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

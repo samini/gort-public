@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.libs.springframework">
+    <module_version install_time="1370462458372" last="true" origin="installer" specification_version="1.23.1">
+        <file crc="277049246" name="config/Modules/org-netbeans-libs-springframework.xml"/>
+        <file crc="3152855899" name="modules/ext/spring-3.0/license.txt"/>
+        <file crc="1641778891" name="modules/ext/spring-3.0/spring-aop-3.1.1.RELEASE.jar"/>
+        <file crc="38512087" name="modules/ext/spring-3.0/spring-asm-3.1.1.RELEASE.jar"/>
+        <file crc="3404404372" name="modules/ext/spring-3.0/spring-aspects-3.1.1.RELEASE.jar"/>
+        <file crc="2541239973" name="modules/ext/spring-3.0/spring-beans-3.1.1.RELEASE.jar"/>
+        <file crc="286956403" name="modules/ext/spring-3.0/spring-context-3.1.1.RELEASE.jar"/>
+        <file crc="2163259419" name="modules/ext/spring-3.0/spring-context-support-3.1.1.RELEASE.jar"/>
+        <file crc="952975123" name="modules/ext/spring-3.0/spring-core-3.1.1.RELEASE.jar"/>
+        <file crc="949205340" name="modules/ext/spring-3.0/spring-expression-3.1.1.RELEASE.jar"/>
+        <file crc="3519407246" name="modules/ext/spring-3.0/spring-instrument-3.1.1.RELEASE.jar"/>
+        <file crc="3494238288" name="modules/ext/spring-3.0/spring-instrument-tomcat-3.1.1.RELEASE.jar"/>
+        <file crc="1119794974" name="modules/ext/spring-3.0/spring-jdbc-3.1.1.RELEASE.jar"/>
+        <file crc="3765740959" name="modules/ext/spring-3.0/spring-jms-3.1.1.RELEASE.jar"/>
+        <file crc="3649053369" name="modules/ext/spring-3.0/spring-orm-3.1.1.RELEASE.jar"/>
+        <file crc="4144767418" name="modules/ext/spring-3.0/spring-oxm-3.1.1.RELEASE.jar"/>
+        <file crc="2811778778" name="modules/ext/spring-3.0/spring-struts-3.1.1.RELEASE.jar"/>
+        <file crc="3979846653" name="modules/ext/spring-3.0/spring-test-3.1.1.RELEASE.jar"/>
+        <file crc="3238746670" name="modules/ext/spring-3.0/spring-tx-3.1.1.RELEASE.jar"/>
+        <file crc="2450358375" name="modules/ext/spring-3.0/spring-web-3.1.1.RELEASE.jar"/>
+        <file crc="3364312030" name="modules/ext/spring-3.0/spring-webmvc-3.1.1.RELEASE.jar"/>
+        <file crc="1241762732" name="modules/ext/spring-3.0/spring-webmvc-portlet-3.1.1.RELEASE.jar"/>
+        <file crc="547499480" name="modules/ext/spring/spring-2.5.6.SEC03.jar"/>
+        <file crc="2569453698" name="modules/locale/org-netbeans-libs-springframework_ja.jar"/>
+        <file crc="1282123902" name="modules/locale/org-netbeans-libs-springframework_pt_BR.jar"/>
+        <file crc="1211895926" name="modules/locale/org-netbeans-libs-springframework_ru.jar"/>
+        <file crc="603682334" name="modules/locale/org-netbeans-libs-springframework_zh_CN.jar"/>
+        <file crc="1727813382" name="modules/org-netbeans-libs-springframework.jar"/>
+    </module_version>
+</module>

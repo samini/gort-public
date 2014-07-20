@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+<!-- for some information on what you could do (e.g. targets to override). -->
+<!-- If you delete this file and reopen the project it will be recreated. -->
+<project name="org.cmuchimps.gort.modules.gesturenbm" default="netbeans" basedir=".">
+    <description>Builds, tests, and runs the project org.cmuchimps.gort.modules.gesturenbm.</description>
+    <import file="nbproject/build-impl.xml"/>
+    
+    <property file="nbproject/suite.properties"/>
+    
+    <property name="nbm.update.dir" value="${suite.dir}/build/cluster/update/download"/>
+    
+    <!--Set value to enable or disable gesturecollection support-->
+    <property name="gesturecollectionsupport" value="true" />
+    
+    <target name="clean" depends="gesture-collection-support,projectized-common.clean" />
+    
+    <target name="gesture-collection-support" if="${gesturecollectionsupport}">
+        <echo>Copying Gesture Collection NBM...</echo>
+        <copy todir="${nbm.update.dir}">
+            <fileset dir="res/"/>
+        </copy>
+    </target>
+    
+</project>

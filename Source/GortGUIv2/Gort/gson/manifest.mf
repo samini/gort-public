@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: com.google.gson
+OpenIDE-Module-Localizing-Bundle: com/google/gson/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

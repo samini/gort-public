@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.masterfs.linux">
+    <module_version install_time="1370463380050" last="true" origin="installer" specification_version="1.4.1">
+        <file crc="367044464" name="config/Modules/org-netbeans-modules-masterfs-linux.xml"/>
+        <file crc="1939469246" name="modules/locale/org-netbeans-modules-masterfs-linux_ja.jar"/>
+        <file crc="2140599204" name="modules/locale/org-netbeans-modules-masterfs-linux_pt_BR.jar"/>
+        <file crc="4123627230" name="modules/locale/org-netbeans-modules-masterfs-linux_ru.jar"/>
+        <file crc="2253304973" name="modules/locale/org-netbeans-modules-masterfs-linux_zh_CN.jar"/>
+        <file crc="1231772182" name="modules/org-netbeans-modules-masterfs-linux.jar"/>
+    </module_version>
+</module>

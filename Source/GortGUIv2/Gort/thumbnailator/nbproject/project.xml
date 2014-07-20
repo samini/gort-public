@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.apisupport.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+            <code-name-base>net.coobird.thumbnailator</code-name-base>
+            <suite-component/>
+            <module-dependencies/>
+            <public-packages>
+                <package>net.coobird.thumbnailator</package>
+                <package>net.coobird.thumbnailator.builders</package>
+                <package>net.coobird.thumbnailator.filters</package>
+                <package>net.coobird.thumbnailator.geometry</package>
+                <package>net.coobird.thumbnailator.makers</package>
+                <package>net.coobird.thumbnailator.name</package>
+                <package>net.coobird.thumbnailator.resizers</package>
+                <package>net.coobird.thumbnailator.resizers.configurations</package>
+                <package>net.coobird.thumbnailator.tasks</package>
+                <package>net.coobird.thumbnailator.tasks.io</package>
+                <package>net.coobird.thumbnailator.util</package>
+                <package>net.coobird.thumbnailator.util.exif</package>
+            </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/thumbnailator-0.4.6.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/thumbnailator-0.4.6.jar</binary-origin>
+            </class-path-extension>
+        </data>
+    </configuration>
+</project>

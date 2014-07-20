@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.apisupport.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+            <code-name-base>org.im4java</code-name-base>
+            <suite-component/>
+            <module-dependencies/>
+            <public-packages>
+                <package>org.im4java.core</package>
+                <package>org.im4java.process</package>
+                <package>org.im4java.script</package>
+                <package>org.im4java.test</package>
+                <package>org.im4java.utils</package>
+            </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/im4java-1.4.0.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/im4java-1.4.0.jar</binary-origin>
+            </class-path-extension>
+        </data>
+    </configuration>
+</project>

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: net.coobird.thumbnailator
+OpenIDE-Module-Localizing-Bundle: net/coobird/thumbnailator/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

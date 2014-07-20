@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Gort">
+        <folder name="CrowdTasks">
+            <folder name="BestImage">
+                <file name="best_image.properties" url="samples/best_image/best_image.properties" />
+                <file name="best_image.question" url="samples/best_image/best_image.question" />
+            </folder>
+            <folder name="SimpleSurvey">
+                <file name="simple_survey.question" url="samples/simple_survey/simple_survey.question" />
+            </folder>
+            <folder name="SiteCategory">
+                <file name="site_category.input" url="samples/site_category/site_category.input" />
+                <file name="site_category.properties" url="samples/site_category/site_category.properties" />
+                <file name="site_category.question" url="samples/site_category/site_category.question" />
+            </folder>
+            <folder name="Tasks">
+                <file name="task.properties" url="tasks/task.properties" />
+                <file name="apptaskextraction.xml" url="tasks/apptaskextraction.xml" />
+                <file name="apptaskverification.xml" url="tasks/apptaskverification.xml" />
+                <file name="appresourcejustification.xml" url="tasks/appresourcejustification.xml" />
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: att.grappa
+OpenIDE-Module-Localizing-Bundle: att/grappa/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

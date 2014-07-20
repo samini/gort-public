@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.im4java
+OpenIDE-Module-Localizing-Bundle: org/im4java/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

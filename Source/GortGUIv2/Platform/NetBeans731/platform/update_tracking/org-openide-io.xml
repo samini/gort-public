@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.openide.io">
+    <module_version install_time="1370463136850" last="true" origin="installer" specification_version="1.35.1">
+        <file crc="3834804485" name="config/Modules/org-openide-io.xml"/>
+        <file crc="1223282490" name="modules/locale/org-openide-io_ja.jar"/>
+        <file crc="3221336982" name="modules/locale/org-openide-io_pt_BR.jar"/>
+        <file crc="2116354995" name="modules/locale/org-openide-io_ru.jar"/>
+        <file crc="3822455735" name="modules/locale/org-openide-io_zh_CN.jar"/>
+        <file crc="29462986" name="modules/org-openide-io.jar"/>
+    </module_version>
+</module>

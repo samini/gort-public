@@ -1,0 +1,439 @@
+import sqlite3 as sql
+import os
+
+#parse TaintLog
+import re
+
+class TraverserDB:
+
+	NO_ROW = -1
+
+	def __init__(self, path):
+		dirname = os.path.dirname(path)
+		if (dirname != None and dirname != ''):
+			if not os.path.exists(dirname):
+				raise Exception('TraverserDB: Directory Does Not Exist')
+
+		# sqlite3 connection
+		self.__conn = sql.connect(path)
+		# sqlite3 cursor
+		self.__c = self.__conn.cursor()
+
+	"""
+	# when the object is getting deleted, both the sql connection and cursor are closed
+	def __del__(self):
+		self.cleanUp()
+	"""
+
+	def cleanUp(self):
+		if (self.__conn != None):
+			self.__conn.commit()
+
+		if (self.__c != None):
+			self.__c.close()
+
+		self.__conn = None
+		self.__c = None
+
+	def createTables(self):
+		self.createActivityTable()
+		self.createComponentTable()
+		self.createActionTable()
+		self.createTaintLogTable()
+
+	# only unique activities, i.e. cannot have the same activity in the table more than once
+	# cannot have a NULL activity
+	def createActivityTable(self):
+		stmt = "CREATE TABLE IF NOT EXISTS Activity(id INTEGER PRIMARY KEY NOT NULL, name TEXT UNIQUE NOT NULL, screenshot TEXT);"
+		self.__c.execute(stmt)
+
+	# edited the component table to also insert x, y coordinates of components
+	#def createComponentTable(self):
+	#	stmt = """CREATE TABLE IF NOT EXISTS Component(id INTEGER PRIMARY KEY NOT NULL, 
+	#		uiid TEXT, classname TEXT, text TEXT, height INTEGER,
+	#		width INTEGER, activity INTEGER, FOREIGN KEY(activity) REFERENCES Activity(id) );""" 
+	#	self.__c.execute(stmt)
+	def createComponentTable(self):
+		stmt = """CREATE TABLE IF NOT EXISTS Component(id INTEGER PRIMARY KEY NOT NULL, 
+			uiid TEXT, classname TEXT, text TEXT, x INTEGER, y INTEGER, width INTEGER,
+			height INTEGER, activity INTEGER, FOREIGN KEY(activity) REFERENCES Activity(id) );""" 
+		self.__c.execute(stmt)
+
+	# can have a NULL component on action, as it could be a swipe in a region which doesnt require a component
+	# of course all actions require an activity
+	# TODO: what about services?
+	def createActionTable(self):
+		stmt = """CREATE TABLE IF NOT EXISTS Action(id INTEGER PRIMARY KEY NOT NULL, 
+			activity INTEGER,
+			component INTEGER,
+			result INTEGER,
+			nextactivity INTEGER,
+			next INTEGER,
+			type TEXT,
+			arguments TEXT,
+			success INTEGER,
+			time TEXT,
+			screenshot TEXT,
+			FOREIGN KEY(component) REFERENCES Component(id),
+			FOREIGN KEY(nextactivity) REFERENCES Activity(id), 
+			FOREIGN KEY(activity) REFERENCES Activity(id) );""" 
+		self.__c.execute(stmt)
+
+	# TODO: maybe a comprehensive logging table?
+	def createTaintLogTable(self):
+		stmt = """CREATE TABLE IF NOT EXISTS TaintLog(id INTEGER PRIMARY KEY NOT NULL, 
+                        pid TEXT,
+                        tid TEXT,
+                        priority TEXT,
+                        tag TEXT,
+			type TEXT,
+                        message TEXT,
+                        time TEXT,
+			activity INTEGER,
+			tainttag INTEGER,
+			server TEXT,
+			FOREIGN KEY(activity) REFERENCES Activity(id)
+                        );"""
+		self.__c.execute(stmt)
+
+	# INSERT OR IGNORE can be used so that unique constraint are not violated
+	# INSERT OR REPLACE updates the rows with the unique constraint
+	def insertActivity(self, name, screenshot=None):
+		if (name is None):
+			return self.NO_ROW
+		if not isinstance(name, str):
+			return self.NO_ROW
+		if (name == ''):
+			return self.NO_ROW
+
+		stmt = 'INSERT INTO Activity (name, screenshot) values (?, ?)'
+		#stmt = 'INSERT OR IGNORE INTO Activity (name) values (?)'
+		
+		# we use INSERT here to know when the column exists so we can return the correct row id
+		try:
+			self.__c.execute(stmt, (name, screenshot))
+			self.__conn.commit()
+			return self.__c.lastrowid
+		except sql.IntegrityError:
+			stmt = 'SELECT id FROM Activity WHERE name=?'
+			self.__c.execute(stmt, (name, ))
+			retval = self.__c.fetchone()[0]
+			return retval
+
+	def selectActivity(self, _id = None, name = None):
+		if (_id is None and name is None):
+			return None 
+
+		if (_id is None):
+			stmt = 'SELECT * FROM Activity WHERE name=?'
+			self.__c.execute(stmt, (name, ))
+			return self.__c.fetchone()
+
+		if (name is None):
+			stmt = 'SELECT * FROM Activity WHERE id=?'
+			self.__c.execute(stmt, (_id, ))
+			return self.__c.fetchone()
+
+		stmt = 'SELECT * FROM Activity WHERE id=? AND name=?'
+		self.__c.execute(stmt, (_id, name))
+		return self.__c.fetchone()
+
+	def selectActivityName(self, _id):
+		if (_id is None):
+			return None
+
+		stmt = 'SELECT name FROM Activity WHERE id=?'
+		self.__c.execute(stmt, (_id, ))
+
+		val = self.__c.fetchone()
+		if (val is None):
+			return None
+
+		return val[0]
+
+	def selectActivityId(self, name):
+		if (name is None):
+			return None
+
+		stmt = 'SELECT id FROM Activity WHERE name=?'
+		self.__c.execute(stmt, (name, ))
+
+		val = self.__c.fetchone()
+		if (val is None):
+			return None
+
+		return val[0]
+
+	def selectActivities(self):
+		stmt = 'SELECT * FROM Activity'
+		self.__c.execute(stmt)
+		
+		return self.__c.fetchall()
+
+	# returns true or false rather than a row id
+	# lastrowid only updated on insert?
+	# http://www.sqlite.org/c3ref/last_insert_rowid.html
+	def updateActivityScreenshot(self, screenshot, name = None, _id = None):
+		print 'Updating actvitiy screenshot...'
+		if (name is None and _id is None):
+			return False
+
+		stmt = 'UPDATE Activity SET screenshot=? WHERE id=? or name=?'
+		try:
+			self.__c.execute(stmt, (screenshot, _id, name) )
+			self.__conn.commit()
+			return True 
+		except:
+			#raise
+			return False 
+	
+	def insertComponent(self, uiid, classname, text, x, y, width, height, activity):
+		stmt = """INSERT INTO Component (uiid, classname, text, x, y, width, height, activity) values (?,?,?,?,?,?,?,?)"""
+		print uiid, classname, text, x, y, width, height, activity
+		try:
+			self.__c.execute(stmt, (uiid, classname, text, x, y, width, height, activity) )
+			self.__conn.commit()
+			return self.__c.lastrowid
+		except Exception as e:
+			print 'insertComponent not successful'
+			print type(e)
+			print e
+			return self.NO_ROW
+
+	# over multiple iterations multipe ids may be present
+	"""
+	def selectComponent(self, uiid):
+		if (uiid = None):
+			return None
+
+		stmt = 'SELECT * from Component WHERE uiid=?'
+		self.__c.execute(stmt, (uiid, ))
+
+		val = self.__c.fetchone()
+		if (val is None):
+			return None
+
+		return val[0]
+	"""
+
+	def insertAction(self, activity, component, result, nextactivity, _next, _type, arguments, success, time, screenshot=None):
+
+		stmt = """INSERT INTO Action (activity, component, result, nextactivity, next, type, arguments, success, time, screenshot)
+			values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
+
+		try:
+			self.__c.execute(stmt, (activity, component, result, nextactivity, _next, _type, arguments, success, time, screenshot) )
+			self.__conn.commit()
+			return self.__c.lastrowid
+		except:
+			return self.NO_ROW
+
+	def selectActionsByResults(self, result):
+		stmt = """SELECT * FROM Action WHERE result=?"""
+		self.__c.execute(stmt, (result, ))
+		return self.__c.fetchall()
+
+	# returns two actions from the Action table where
+	# before is the action that occurred before the specified time
+	# and after is the action that occurred right after the specified time
+	# time in ISO format
+	def selectEnclosingActions(self, time):
+		if (time is None):
+			return None
+
+		stmt = 'SELECT *, (julianday(?)-julianday(time)) AS date_dist FROM Action ORDER BY abs(date_dist) LIMIT 20'
+		self.__c.execute(stmt, (time, ))
+
+		results = self.__c.fetchall()
+
+		before = None
+		after = None
+
+		for r in results:
+
+			date_dist = r[11]
+
+			if (before is None):
+				if (date_dist < 0):
+					before = r
+
+			if (after is None):
+				if (date_dist > 0):
+					after = r
+
+			if (before is not None and after is not None):
+				break
+
+		return (before, after)
+
+
+	def insertTaintLog(self, pid, tid, priority, tag, _type, message, time, activity=None, tainttag=None, server=None):
+		stmt = """INSERT INTO TaintLog (pid, tid, priority, tag, type, message, time, activity, tainttag, server) 
+			values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"""
+
+		# type of message is described early on in the message
+		if not _type:
+			substring = None
+			if message:
+				if (len(message) >= 64):
+					substring = message[0:64]
+				else:
+					substring = message
+
+			# this might be better done with re
+			if (substring is not None):
+				if (substring.find('OSNetworkSystem.write') != -1):
+					_type = 'OSNetworkSystem'
+				elif (substring.find('SSLOutputStream.write') != -1):
+					_type = 'SSLOutputStream'
+				elif (substring.find('OSFileSystem.write') != -1):
+					_type = 'OSFileSystem'
+				elif (substring.find('libcore.os.send') != -1):
+					_type = 'libcore.os.send'
+				elif (substring.find('libcore.os.write') != -1):
+					_type = 'libcore.os.write'
+				elif (substring.find('libcore.os.read') != -1):
+					_type = 'libcore.os.read'
+
+		# check for an ip address
+		if (server is None):
+			ip = re.compile('(([2][5][0-5]\.)|([2][0-4][0-9]\.)|([0-1]?[0-9]?[0-9]\.)){3}'
+			                +'(([2][5][0-5])|([2][0-4][0-9])|([0-1]?[0-9]?[0-9]))')
+			match = ip.search(message)
+
+			if match:
+
+				server = match.group() 
+
+		# check for a tainttag
+		if (tainttag is None):
+			tainttagRe = re.compile(r'tag 0x(?P<tainttag>[0-9A-Fa-f]+)')
+
+			match = tainttagRe.search(message)
+
+			if match:
+				hexTaintTag = match.group('tainttag')
+				tainttag = int(hexTaintTag, 16)
+					
+
+		# check for a taint tag: tag 0x....
+
+		try:
+			self.__c.execute(stmt, (pid, tid, priority, tag, _type, message, time, activity, tainttag, server) )
+			self.__conn.commit()
+			return self.__c.lastrowid
+		except:
+			print 'insertTaintLog exception'
+			raise
+			return self.NO_ROW
+
+	def updateTaintLogActivity(self,_id, activityId):
+		if (_id is None or activityId is None):
+			return False
+
+		stmt = 'UPDATE TaintLog SET activity=? WHERE rowid=?'
+		try:
+			self.__c.execute(stmt, (activityId, _id) )
+			self.__conn.commit()
+			return True
+		except:
+			return False
+
+	# _type can be a tuple to allow multiple types to be fetched at once
+	def selectTaintLogByType(self, _type):
+		if (_type is None):
+			return None
+
+		#stmt = 'SELECT rowid, time FROM TaintLog WHERE '
+		stmt = 'SELECT * FROM TaintLog WHERE '
+
+		try:
+			if (isinstance(_type,str)):
+				stmt = stmt + 'type=?'
+				self.__c.execute(stmt, (_type, ) )
+			elif (isinstance(_type,tuple)):
+				stmt = stmt + 'type IN ('
+
+				for i in range(0, len(_type)):
+					if (i != len(_type) - 1):
+						stmt = stmt + '?, '
+					else:
+						stmt = stmt + '?)'
+				self.__c.execute(stmt, _type)
+
+			return self.__c.fetchall()
+		except:
+			print 'selectTaintLogByType exception'
+			return None
+
+	# gets all the information for a single TaintLog or returns None if does not exist
+	def selectTaintLogById(self, _id):
+		if (_id is None):
+			return None
+
+		stmt = 'SELECT * FROM TaintLog WHERE rowid=?'
+
+		try:
+			self.__c.execute(stmt, (_id, ))
+			return self.__c.fetchone()
+		except:
+			return None
+
+
+if __name__ == "__main__":
+	print 'Version:', sql.version
+	print 'Sqlite Version:', sql.sqlite_version
+	t = TraverserDB('tmp.db')
+	t.createTables()
+
+	# tests out activity inserts and also if duplicate cause problems
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityBusinessListResults')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityBookmarks')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityLogin')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityNearbyFriends')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityNearby')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityBusinessListResultsMap')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityBusinessListResults')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityBusinessListResults')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityBusinessListResults')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+	print t.insertActivity('com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+	print t.insertActivity('com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+	print t.insertActivity('com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+	print t.insertActivity('com.yelp.android/.ui.activities.ActivityHome')
+	print t.insertActivity('com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+	print t.insertActivity('')
+	print t.insertActivity(None)
+
+	for i in range(0,10):
+		print t.selectActivityName(i)
+
+	print 'Activity Id:', t.selectActivityId('com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+
+	print t.selectActivity(_id=3)
+	print t.selectActivity(name='com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+	print t.selectActivity(3, 'com.yelp.android/.ui.activities.deals.ActivityDealsLanding')
+
+	components = [('405f65b0', 'android.widget.Button', 'Search'),
+	('40675d48', 'com.yelp.android.ui.widgets.LabeledButton', 'Deals'),
+	('407b6580', 'android.widget.Button', 'Search'),
+	('408ec940', 'com.yelp.android.ui.widgets.LabeledButton', 'Deals')]
+	print components
+
+	import random
+	for c in components:
+		print t.insertComponent(c[0], c[1], c[2], random.randint(0,255), random.randint(0,255), random.randint(0,255), random.randint(0,255), random.randint(0,255))

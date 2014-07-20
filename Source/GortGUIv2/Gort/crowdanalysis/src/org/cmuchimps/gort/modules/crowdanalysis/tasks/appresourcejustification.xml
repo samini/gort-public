@@ -1,0 +1,156 @@
+<HTMLQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2011-11-11/HTMLQuestion.xsd">
+  <HTMLContent><![CDATA[
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // set the submit button to validate the input
+      $('#submitButton').attr('onclick', 'return validateForm();');
+    });
+      
+    function validateForm() {
+      // check user has input for version
+      var version = $('#AndroidVersion').val();
+      if (version == "" || version == null) {
+        return false;
+      }
+      
+      // check at least one radio button selected for UsedApp
+      if (!$('input[name=UsedApp]:checked').length) {
+        return false;
+      }
+      
+      // check at least one radio button selected for AppType
+      if (!$('input[name=AppType]:checked').length) {
+        return false;
+      }
+      
+      // check at least one radio button selected for Expected
+      if (!$('input[name=Expected]:checked').length) {
+        return false;
+      }
+      
+      // check at least one radio button selected for Comfort
+      if (!$('input[name=Comfort]:checked').length) {
+        return false;
+      }
+      
+      return true;
+    }
+  </script>
+ </head>
+ <body>
+  <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
+  <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+  <p>This task requires that you own and use an Android smartphone. You should have experience installing and running applications on your smartphone.</p>
+
+<p>1. What version of Android do you run on your device? To find the version of Android on your device, go to <b>Settings</b> on your phone. Select <b>About phone</b>. The Android version is displayed as one of the items on the screen. Note the version number is a number separated by dots and does not include words or any other characters. If you use more than one Android smartphone, please enter the version for the device&nbsp;you use most often.&nbsp;<span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<p><input id="AndroidVersion" name="AndroidVersion" type="text" /></p>
+
+<p>Please read the application description carefully, look at the application screenshots, and answer the questions below.</p>
+
+<p><b>App Name:</b>&nbsp;${appname}</p>
+
+<p>${description}</p>
+
+<p><img alt="" border="1" src="${screenshot0}" style="margin-right: 20px;" /><img alt="" border="1" src="${screenshot1}" /></p>
+
+<p>2. Have you used this app before? <span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<table border="0" cellpadding="0" cellspacing="4">
+	<tbody>
+		<tr>
+			<td valign="middle"><input name="UsedApp" type="radio" value="Yes" /></td>
+			<td><span class="answertext">Yes</span></td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="UsedApp" type="radio" value="No" /></td>
+			<td><span class="answertext">No</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>3. What category do you think this mobile app should belong to?&nbsp;<span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<table border="0" cellpadding="0" cellspacing="4">
+	<tbody>
+		<tr>
+			<td valign="middle"><input name="AppType" type="radio" value="GameApplication" /></td>
+			<td>Game application</td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="AppType" type="radio" value="NonGameApplication" /></td>
+			<td>Non-game application</td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="AppType" type="radio" value="Content" /></td>
+			<td>Book, music, or video</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>Suppose you have installed and are using ${appname} on your Android smartphone. You learn that ${appname} uses your <strong>${resource}</strong> while you conduct the following task with the app:</p>
+
+<p><strong>${task}</strong></p>
+
+<p>4. Would you expect ${appname} to use your ${resource} while conducting the above task?&nbsp;<span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<table border="0" cellpadding="0" cellspacing="4">
+	<tbody>
+		<tr>
+			<td valign="middle"><input name="Expected" type="radio" value="Yes" /></td>
+			<td><span class="answertext">Yes</span></td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="Expected" type="radio" value="No" /></td>
+			<td><span class="answertext">No</span></td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="Expected" type="radio" value="DontKnow" /></td>
+			<td><span class="answertext">I don&#39;t know what &#39;${task}&#39; means.</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>5. How comfortable do you feel&nbsp;with ${appname} using&nbsp;your ${resource} for the task?&nbsp;<span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<table border="0" cellpadding="0" cellspacing="4">
+	<tbody>
+		<tr>
+			<td valign="middle"><input name="Comfort" type="radio" value="2" /></td>
+			<td><span class="answertext">Very comfortable</span></td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="Comfort" type="radio" value="1" /></td>
+			<td><span class="answertext">Somewhat comfortable</span></td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="Comfort" type="radio" value="-1" /></td>
+			<td><span class="answertext">Somewhat uncomfortable</span></td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="Comfort" type="radio" value="-2" /></td>
+			<td><span class="answertext">Very uncomfortable</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>6. Please provide any other comments you have. We appreciate your input!</p>
+
+<p><textarea cols="80" name="Comments" rows="3"></textarea></p>
+      
+<p>&nbsp;</p>
+<p><input type='submit' id='submitButton' value='Submit' /></p>
+</form>
+  <script language='Javascript'>turkSetAssignmentID();</script>
+ </body>
+</html>
+]]>
+  </HTMLContent>
+  <FrameHeight>700</FrameHeight>
+</HTMLQuestion>

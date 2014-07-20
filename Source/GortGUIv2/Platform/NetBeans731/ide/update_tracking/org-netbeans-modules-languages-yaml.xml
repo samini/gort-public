@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.languages.yaml">
+    <module_version install_time="1370464763563" last="true" origin="installer" specification_version="2.22.1">
+        <file crc="1110107827" name="config/Modules/org-netbeans-modules-languages-yaml.xml"/>
+        <file crc="2885149042" name="modules/locale/org-netbeans-modules-languages-yaml_ja.jar"/>
+        <file crc="1840104721" name="modules/locale/org-netbeans-modules-languages-yaml_pt_BR.jar"/>
+        <file crc="2023061323" name="modules/locale/org-netbeans-modules-languages-yaml_ru.jar"/>
+        <file crc="2280970840" name="modules/locale/org-netbeans-modules-languages-yaml_zh_CN.jar"/>
+        <file crc="1590800668" name="modules/org-netbeans-modules-languages-yaml.jar"/>
+    </module_version>
+</module>

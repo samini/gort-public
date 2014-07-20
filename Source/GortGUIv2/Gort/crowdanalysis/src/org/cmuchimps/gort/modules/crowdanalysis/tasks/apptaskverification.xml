@@ -1,0 +1,275 @@
+<HTMLQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2011-11-11/HTMLQuestion.xsd">
+  <HTMLContent><![CDATA[
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // number between 0 and 9
+      var r = Math.floor(Math.random()*10);
+      var q = '<tr><td style="text-align:left">Select &quot;Above Average&quot; here</td><td valign="center"><input id="RateTaskDesc11A1" name="RateTaskDesc11" type="radio" value="1" /></td><td valign="center"><input id="RateTaskDesc11A2" name="RateTaskDesc11" type="radio" value="2" /></td><td valign="center"><input id="RateTaskDesc11A3" name="RateTaskDesc11" type="radio" value="3" /></td><td valign="center"><input id="RateTaskDesc11A4" name="RateTaskDesc11" type="radio" value="4" /></td><td valign="center"><input id="RateTaskDesc11A5" name="RateTaskDesc11" type="radio" value="5" /></td><td valign="center"><input id="RateTaskDesc11A6" name="RateTaskDesc11" type="radio" value="6" /></td><td valign="center"><input id="RateTaskDesc11A7" name="RateTaskDesc11" type="radio" value="7" /></td></tr>';
+      $('#desc-question-table > tbody > tr').eq(r).after(q);
+      if ('${single}' === 'true') {
+        $('#task-question-overview').html('Suppose you have installed and are using ${appname} on your Android smartphone. You are on the following screen of the application. Think about the task you are trying to accomplish on the screen.');
+        $('#task-question').html('4. Select how well each of the options below describes what you are trying to accomplish <b>on the above screen</b>. Please take into account grammar and spelling.&nbsp;<span style="color: rgb(255, 0, 0);">(required)</span>');
+        $('#task-screenshot-2').hide();
+      }
+      if ('${desc1}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-1').hide();
+      }
+      if ('${desc2}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-2').hide();
+      }
+      if ('${desc3}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-3').hide();
+      }
+      if ('${desc4}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-4').hide();
+      }
+      if ('${desc5}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-5').hide();
+      }
+      if ('${desc6}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-6').hide();
+      }
+      if ('${desc7}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-7').hide();
+      }
+      if ('${desc8}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-8').hide();
+      }
+      if ('${desc9}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-9').hide();
+      }
+      if ('${desc10}' === 'DESCRIPTION_NONE') {
+        $('#desc-question-10').hide();
+      }
+      // set the submit button to validate the input
+      $('#submitButton').attr('onclick', 'return validateForm();');
+    });
+    function validateForm() {
+      // check user has input for version
+      var version = $('#AndroidVersion').val();
+      if (version == "" || version == null) {
+        return false;
+      }
+      
+      // check at least one radio button selected for UsedApp
+      if (!$('input[name=UsedApp]:checked').length) {
+        return false;
+      }
+      
+      // check at least one radio button selected for AppType
+      if (!$('input[name=AppType]:checked').length) {
+        return false;
+      }
+      
+      var names = ['RateTaskDesc01', 'RateTaskDesc02', 'RateTaskDesc03', 'RateTaskDesc04', 'RateTaskDesc05', 'RateTaskDesc06', 'RateTaskDesc07', 'RateTaskDesc08', 'RateTaskDesc09', 'RateTaskDesc10', 'RateTaskDesc11'];
+      
+      for (var i = 0; i < names.length; i++) {
+        // if the option is hidden skip the validation
+        if ($('input[name=' + names[i] + ']:hidden').length) {
+          continue;
+        }
+        
+        // check that an option has been selected
+        if (!$('input[name=' + names[i] + ']:checked').length) {
+          return false;
+        }
+      }
+      
+      return true;
+    }
+  </script>
+ </head>
+ <body>
+  <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
+  <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+  <p>This task requires that you own and use an Android smartphone. You should have experience installing and running applications on your smartphone.</p>
+
+<p>1. What version of Android do you run on your device? To find the version of Android on your device, go to <b>Settings</b> on your phone. Select <b>About phone</b>. The Android version is displayed as one of the items on the screen. Note the version number is a number separated by dots and does not include words or any other characters. If you use more than one Android smartphone, please enter the version for the device&nbsp;you use most often.&nbsp;<span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<p><input id="AndroidVersion" name="AndroidVersion" type="text" /></p>
+
+<p>Please read the application description carefully, look at the application screenshots, and answer the questions below.</p>
+
+<p><b>App Name:</b>&nbsp;${appname}</p>
+
+<p>${description}</p>
+
+<p><img alt="" border="1" src="${screenshot0}" style="margin-right: 20px;" /><img alt="" border="1" src="${screenshot1}" /></p>
+
+<p>2. Have you used this app before? <span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<table border="0" cellpadding="0" cellspacing="4">
+	<tbody>
+		<tr>
+			<td valign="middle"><input name="UsedApp" type="radio" value="Yes" /></td>
+			<td><span class="answertext">Yes</span></td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="UsedApp" type="radio" value="No" /></td>
+			<td><span class="answertext">No</span></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>3. What category do you think this mobile app should belong to?&nbsp;<span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<table border="0" cellpadding="0" cellspacing="4">
+	<tbody>
+		<tr>
+			<td valign="middle"><input name="AppType" type="radio" value="GameApplication" /></td>
+			<td>Game application</td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="AppType" type="radio" value="NonGameApplication" /></td>
+			<td>Non-game application</td>
+		</tr>
+		<tr>
+			<td valign="middle"><input name="AppType" type="radio" value="Content" /></td>
+			<td>Book, music, or video</td>
+		</tr>
+	</tbody>
+</table>
+
+<p id="task-question-overview">Suppose you have installed and are using ${appname} on your Android smartphone. You just went through the following two screens on your device, starting with the screen on the left. Think about the task you were trying to accomplish over the course of these two screens.</p>
+
+<p><img alt="" border="1" src="${screenshot2}" style="margin-right: 20px;" /><img id="task-screenshot-2" alt="" border="1" src="${screenshot3}" /></p>
+
+<p id="task-question">4. Select how well each of the options below describes what you were trying to accomplish <b>over the course of the above two screens</b>. Please take into account grammar and spelling. Note: If the two screens are too similar, please respond with respect to a single screen.&nbsp;<span style="color: rgb(255, 0, 0);">(required)</span></p>
+
+<table id="desc-question-table" border="1" cellpadding="2px" style="text-align:center; border-style:solid;">
+	<thead>
+		<tr>
+			<th>&nbsp;</th>
+			<th>Extremely Poor</th>
+			<th>Below Average</th>
+			<th>Slightly Below Average</th>
+			<th>Average</th>
+			<th>Slightly Above Average</th>
+			<th>Above Average</th>
+			<th>Excellent</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr id="desc-question-1">
+			<td style="text-align:left">${desc1}</td>
+			<td valign="center"><input id="RateTaskDesc01A1" name="RateTaskDesc01" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc01A2" name="RateTaskDesc01" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc01A3" name="RateTaskDesc01" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc01A4" name="RateTaskDesc01" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc01A5" name="RateTaskDesc01" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc01A6" name="RateTaskDesc01" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc01A7" name="RateTaskDesc01" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-2">
+			<td style="text-align:left">${desc2}</td>
+			<td valign="center"><input id="RateTaskDesc02A1" name="RateTaskDesc02" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc02A2" name="RateTaskDesc02" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc02A3" name="RateTaskDesc02" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc02A4" name="RateTaskDesc02" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc02A5" name="RateTaskDesc02" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc02A6" name="RateTaskDesc02" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc02A7" name="RateTaskDesc02" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-3">
+			<td style="text-align:left">${desc3}</td>
+			<td valign="center"><input id="RateTaskDesc03A1" name="RateTaskDesc03" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc03A2" name="RateTaskDesc03" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc03A3" name="RateTaskDesc03" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc03A4" name="RateTaskDesc03" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc03A5" name="RateTaskDesc03" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc03A6" name="RateTaskDesc03" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc03A7" name="RateTaskDesc03" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-4">
+			<td style="text-align:left">${desc4}</td>
+			<td valign="center"><input id="RateTaskDesc04A1" name="RateTaskDesc04" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc04A2" name="RateTaskDesc04" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc04A3" name="RateTaskDesc04" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc04A4" name="RateTaskDesc04" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc04A5" name="RateTaskDesc04" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc04A6" name="RateTaskDesc04" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc04A7" name="RateTaskDesc04" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-5">
+			<td style="text-align:left">${desc5}</td>
+			<td valign="center"><input id="RateTaskDesc05A1" name="RateTaskDesc05" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc05A2" name="RateTaskDesc05" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc05A3" name="RateTaskDesc05" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc05A4" name="RateTaskDesc05" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc05A5" name="RateTaskDesc05" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc05A6" name="RateTaskDesc05" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc05A7" name="RateTaskDesc05" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-6">
+			<td style="text-align:left">${desc6}</td>
+			<td valign="center"><input id="RateTaskDesc06A1" name="RateTaskDesc06" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc06A2" name="RateTaskDesc06" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc06A3" name="RateTaskDesc06" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc06A4" name="RateTaskDesc06" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc06A5" name="RateTaskDesc06" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc06A6" name="RateTaskDesc06" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc06A7" name="RateTaskDesc06" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-7">
+			<td style="text-align:left">${desc7}</td>
+			<td valign="center"><input id="RateTaskDesc07A1" name="RateTaskDesc07" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc07A2" name="RateTaskDesc07" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc07A3" name="RateTaskDesc07" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc07A4" name="RateTaskDesc07" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc07A5" name="RateTaskDesc07" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc07A6" name="RateTaskDesc07" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc07A7" name="RateTaskDesc07" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-8">
+			<td style="text-align:left">${desc8}</td>
+			<td valign="center"><input id="RateTaskDesc08A1" name="RateTaskDesc08" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc08A2" name="RateTaskDesc08" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc08A3" name="RateTaskDesc08" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc08A4" name="RateTaskDesc08" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc08A5" name="RateTaskDesc08" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc08A6" name="RateTaskDesc08" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc08A7" name="RateTaskDesc08" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-9">
+			<td style="text-align:left">${desc9}</td>
+			<td valign="center"><input id="RateTaskDesc09A1" name="RateTaskDesc09" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc09A2" name="RateTaskDesc09" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc09A3" name="RateTaskDesc09" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc09A4" name="RateTaskDesc09" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc09A5" name="RateTaskDesc09" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc09A6" name="RateTaskDesc09" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc09A7" name="RateTaskDesc09" type="radio" value="7" /></td>
+		</tr>
+		<tr id="desc-question-10">
+			<td style="text-align:left">${desc10}</td>
+			<td valign="center"><input id="RateTaskDesc10A1" name="RateTaskDesc10" type="radio" value="1" /></td>
+			<td valign="center"><input id="RateTaskDesc10A2" name="RateTaskDesc10" type="radio" value="2" /></td>
+			<td valign="center"><input id="RateTaskDesc10A3" name="RateTaskDesc10" type="radio" value="3" /></td>
+			<td valign="center"><input id="RateTaskDesc10A4" name="RateTaskDesc10" type="radio" value="4" /></td>
+			<td valign="center"><input id="RateTaskDesc10A5" name="RateTaskDesc10" type="radio" value="5" /></td>
+			<td valign="center"><input id="RateTaskDesc10A6" name="RateTaskDesc10" type="radio" value="6" /></td>
+			<td valign="center"><input id="RateTaskDesc10A7" name="RateTaskDesc10" type="radio" value="7" /></td>
+		</tr>
+	</tbody>
+</table>
+
+<p>5. Please provide any other comments you have. We appreciate your input!</p>
+
+<p><textarea cols="80" name="Comments" rows="3"></textarea></p>
+            
+<p>&nbsp;</p>
+<p><input type='submit' id='submitButton' value='Submit' /></p>
+</form>
+  <script language='Javascript'>turkSetAssignmentID();</script>
+ </body>
+</html>
+]]>
+  </HTMLContent>
+  <FrameHeight>700</FrameHeight>
+</HTMLQuestion>

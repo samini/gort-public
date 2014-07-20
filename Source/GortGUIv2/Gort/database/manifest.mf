@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.cmuchimps.gort.modules.database
+OpenIDE-Module-Install: org/cmuchimps/gort/modules/database/Installer.class
+OpenIDE-Module-Localizing-Bundle: org/cmuchimps/gort/modules/database/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.websvc.saas.kit">
+    <module_version install_time="1370465474419" last="true" origin="installer" specification_version="1.18.2">
+        <file crc="2820530587" name="VERSION.txt"/>
+        <file crc="2168513800" name="config/Modules/org-netbeans-modules-websvc-saas-kit.xml"/>
+        <file crc="2861310760" name="modules/locale/org-netbeans-modules-websvc-saas-kit_ja.jar"/>
+        <file crc="4167415208" name="modules/locale/org-netbeans-modules-websvc-saas-kit_pt_BR.jar"/>
+        <file crc="2838114704" name="modules/locale/org-netbeans-modules-websvc-saas-kit_ru.jar"/>
+        <file crc="999360832" name="modules/locale/org-netbeans-modules-websvc-saas-kit_zh_CN.jar"/>
+        <file crc="3031834718" name="modules/org-netbeans-modules-websvc-saas-kit.jar"/>
+    </module_version>
+</module>

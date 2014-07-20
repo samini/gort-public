@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.core.execution/1">
+    <module_version install_time="1370463883238" last="true" origin="installer" specification_version="1.31.1">
+        <file crc="131205059" name="config/Modules/org-netbeans-core-execution.xml"/>
+        <file crc="1412616285" name="modules/locale/org-netbeans-core-execution_ja.jar"/>
+        <file crc="199629646" name="modules/locale/org-netbeans-core-execution_pt_BR.jar"/>
+        <file crc="43808974" name="modules/locale/org-netbeans-core-execution_ru.jar"/>
+        <file crc="3068246318" name="modules/locale/org-netbeans-core-execution_zh_CN.jar"/>
+        <file crc="3029858709" name="modules/org-netbeans-core-execution.jar"/>
+    </module_version>
+</module>

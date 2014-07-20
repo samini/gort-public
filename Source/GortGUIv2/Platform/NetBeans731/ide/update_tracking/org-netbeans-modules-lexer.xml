@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.lexer/2">
+    <module_version install_time="1370463189545" last="true" origin="installer" specification_version="1.49.3.1">
+        <file crc="3425354387" name="config/Modules/org-netbeans-modules-lexer.xml"/>
+        <file crc="550039763" name="modules/locale/org-netbeans-modules-lexer_ja.jar"/>
+        <file crc="595150759" name="modules/locale/org-netbeans-modules-lexer_pt_BR.jar"/>
+        <file crc="897336866" name="modules/locale/org-netbeans-modules-lexer_ru.jar"/>
+        <file crc="4247632095" name="modules/locale/org-netbeans-modules-lexer_zh_CN.jar"/>
+        <file crc="142822476" name="modules/org-netbeans-modules-lexer.jar"/>
+    </module_version>
+</module>

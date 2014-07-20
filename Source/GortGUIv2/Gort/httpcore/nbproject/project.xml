@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>org.netbeans.modules.apisupport.project</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/nb-module-project/3">
+            <code-name-base>org.apache.http</code-name-base>
+            <suite-component/>
+            <module-dependencies/>
+            <public-packages>
+                <package>org.apache.http</package>
+                <package>org.apache.http.annotation</package>
+                <package>org.apache.http.concurrent</package>
+                <package>org.apache.http.entity</package>
+                <package>org.apache.http.impl</package>
+                <package>org.apache.http.impl.entity</package>
+                <package>org.apache.http.impl.io</package>
+                <package>org.apache.http.impl.pool</package>
+                <package>org.apache.http.io</package>
+                <package>org.apache.http.message</package>
+                <package>org.apache.http.params</package>
+                <package>org.apache.http.pool</package>
+                <package>org.apache.http.protocol</package>
+                <package>org.apache.http.util</package>
+            </public-packages>
+            <class-path-extension>
+                <runtime-relative-path>ext/httpcore-4.2.4.jar</runtime-relative-path>
+                <binary-origin>release/modules/ext/httpcore-4.2.4.jar</binary-origin>
+            </class-path-extension>
+        </data>
+    </configuration>
+</project>

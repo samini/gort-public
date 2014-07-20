@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.java.j2seproject/1">
+    <module_version install_time="1370465131249" last="true" origin="installer" specification_version="1.56.1.46">
+        <file crc="1751482983" name="ant/extra/org-netbeans-modules-java-j2seproject-copylibstask.jar"/>
+        <file crc="2001838858" name="config/Modules/org-netbeans-modules-java-j2seproject.xml"/>
+        <file crc="703691965" name="modules/locale/org-netbeans-modules-java-j2seproject_ja.jar"/>
+        <file crc="2507747189" name="modules/locale/org-netbeans-modules-java-j2seproject_pt_BR.jar"/>
+        <file crc="913271530" name="modules/locale/org-netbeans-modules-java-j2seproject_ru.jar"/>
+        <file crc="3997025569" name="modules/locale/org-netbeans-modules-java-j2seproject_zh_CN.jar"/>
+        <file crc="1946290650" name="modules/org-netbeans-modules-java-j2seproject.jar"/>
+    </module_version>
+</module>

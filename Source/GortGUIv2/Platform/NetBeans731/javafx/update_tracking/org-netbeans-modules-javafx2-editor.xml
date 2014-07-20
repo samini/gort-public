@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.javafx2.editor">
+    <module_version install_time="1370465583824" last="true" origin="installer" specification_version="1.10.2.9.23">
+        <file crc="1804688584" name="config/Modules/org-netbeans-modules-javafx2-editor.xml"/>
+        <file crc="2632767862" name="modules/locale/org-netbeans-modules-javafx2-editor_ja.jar"/>
+        <file crc="229499988" name="modules/locale/org-netbeans-modules-javafx2-editor_pt_BR.jar"/>
+        <file crc="2970971813" name="modules/locale/org-netbeans-modules-javafx2-editor_ru.jar"/>
+        <file crc="4174566762" name="modules/locale/org-netbeans-modules-javafx2-editor_zh_CN.jar"/>
+        <file crc="734677046" name="modules/org-netbeans-modules-javafx2-editor.jar"/>
+    </module_version>
+</module>

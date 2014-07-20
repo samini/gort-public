@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.xml.schema.completion">
+    <module_version install_time="1370464795072" last="true" origin="installer" specification_version="1.20.1">
+        <file crc="3412686390" name="config/Modules/org-netbeans-modules-xml-schema-completion.xml"/>
+        <file crc="2259132328" name="modules/locale/org-netbeans-modules-xml-schema-completion_ja.jar"/>
+        <file crc="2534551195" name="modules/locale/org-netbeans-modules-xml-schema-completion_pt_BR.jar"/>
+        <file crc="2712780004" name="modules/locale/org-netbeans-modules-xml-schema-completion_ru.jar"/>
+        <file crc="3997837643" name="modules/locale/org-netbeans-modules-xml-schema-completion_zh_CN.jar"/>
+        <file crc="2372166240" name="modules/org-netbeans-modules-xml-schema-completion.jar"/>
+    </module_version>
+</module>

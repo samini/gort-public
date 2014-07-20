@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.apache.commons.codec
+OpenIDE-Module-Localizing-Bundle: org/apache/commons/codec/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.libs.jsr223/1">
+    <module_version install_time="1370462405486" last="true" origin="installer" specification_version="1.26.1">
+        <file crc="1051087422" name="config/Modules/org-netbeans-libs-jsr223.xml"/>
+        <file crc="640330765" name="modules/locale/org-netbeans-libs-jsr223_ja.jar"/>
+        <file crc="2114465183" name="modules/locale/org-netbeans-libs-jsr223_pt_BR.jar"/>
+        <file crc="2414881489" name="modules/locale/org-netbeans-libs-jsr223_ru.jar"/>
+        <file crc="1837989919" name="modules/locale/org-netbeans-libs-jsr223_zh_CN.jar"/>
+        <file crc="1734173774" name="modules/org-netbeans-libs-jsr223.jar"/>
+    </module_version>
+</module>

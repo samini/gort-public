@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.apache.http
+OpenIDE-Module-Localizing-Bundle: org/apache/http/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+

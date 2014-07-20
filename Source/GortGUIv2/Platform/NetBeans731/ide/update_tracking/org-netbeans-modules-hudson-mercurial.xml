@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.hudson.mercurial">
+    <module_version install_time="1370466402040" last="true" origin="installer" specification_version="1.18.1">
+        <file crc="1555280493" name="config/Modules/org-netbeans-modules-hudson-mercurial.xml"/>
+        <file crc="2065624925" name="modules/locale/org-netbeans-modules-hudson-mercurial_ja.jar"/>
+        <file crc="3007041578" name="modules/locale/org-netbeans-modules-hudson-mercurial_pt_BR.jar"/>
+        <file crc="2994254011" name="modules/locale/org-netbeans-modules-hudson-mercurial_ru.jar"/>
+        <file crc="2206849442" name="modules/locale/org-netbeans-modules-hudson-mercurial_zh_CN.jar"/>
+        <file crc="36170243" name="modules/org-netbeans-modules-hudson-mercurial.jar"/>
+    </module_version>
+</module>

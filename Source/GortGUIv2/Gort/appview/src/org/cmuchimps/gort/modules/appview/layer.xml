@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN" "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Window">
+            <file name="org-cmuchimps-gort-modules-appview-AppInformationTopComponent.instance">
+                <attr name="instanceCreate" methodvalue="org.openide.windows.TopComponent.openAction"/>
+                <attr name="preferredID" stringvalue="AppStatisticsTopComponent"/>
+            </file>
+            <file name="org-cmuchimps-gort-modules-appview-AppStatisticsTopComponent.instance_hidden"/>
+        </folder>
+    </folder>
+    <folder name="Windows2">
+        <folder name="Groups">
+            <file name="AppViewGroup.wsgrp" url="groups/AppViewGroupWsgrp.xml"/>
+            <folder name="AppViewGroup">
+                <file name="ActivitiesTopComponent.wstcgrp" url="groups/AppViewGroup/ActivitiesTopComponentWstcgrp.xml"/>
+                <file name="AppDescriptionTopComponent.wstcgrp" url="groups/AppViewGroup/AppDescriptionTopComponentWstcgrp.xml"/>
+                <file name="AppInformationTopComponent.wstcgrp" url="groups/AppViewGroup/AppInformationTopComponentWstcgrp.xml"/>
+                <file name="CrowdTopComponent.wstcgrp" url="groups/AppViewGroup/CrowdTopComponentWstcgrp.xml"/>
+                <file name="CrowdDetailsTopComponent.wstcgrp" url="groups/AppViewGroup/CrowdDetailsTopComponentWstcgrp.xml"/>
+                <file name="DetailMessageTopComponent.wstcgrp" url="groups/AppViewGroup/DetailMessageTopComponentWstcgrp.xml"/>
+                <file name="HeuristicsTopComponent.wstcgrp" url="groups/AppViewGroup/HeuristicsTopComponentWstcgrp.xml"/>
+                <file name="LibrariesTopComponent.wstcgrp" url="groups/AppViewGroup/LibrariesTopComponentWstcgrp.xml"/>
+                <file name="NetworkRequestsTopComponent.wstcgrp" url="groups/AppViewGroup/NetworkRequestsTopComponentWstcgrp.xml"/>
+                <file name="PermissionsTopComponent.wstcgrp" url="groups/AppViewGroup/PermissionsTopComponentWstcgrp.xml"/>
+                <file name="ProvidersTopComponent.wstcgrp" url="groups/AppViewGroup/ProvidersTopComponentWstcgrp.xml"/>
+                <file name="ReceiversTopComponent.wstcgrp" url="groups/AppViewGroup/ReceiversTopComponentWstcgrp.xml"/>
+                <file name="ServersTopComponent.wstcgrp" url="groups/AppViewGroup/ServersTopComponentWstcgrp.xml"/>
+                <file name="ServicesTopComponent.wstcgrp" url="groups/AppViewGroup/ServicesTopComponentWstcgrp.xml"/>
+            </folder>
+        </folder>
+    </folder>
+</filesystem>

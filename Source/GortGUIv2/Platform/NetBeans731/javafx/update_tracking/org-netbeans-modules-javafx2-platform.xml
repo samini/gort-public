@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.javafx2.platform">
+    <module_version install_time="1370464344658" last="true" origin="installer" specification_version="1.10.1">
+        <file crc="3783293624" name="config/Modules/org-netbeans-modules-javafx2-platform.xml"/>
+        <file crc="135506494" name="modules/locale/org-netbeans-modules-javafx2-platform_ja.jar"/>
+        <file crc="3733567228" name="modules/locale/org-netbeans-modules-javafx2-platform_pt_BR.jar"/>
+        <file crc="233119840" name="modules/locale/org-netbeans-modules-javafx2-platform_ru.jar"/>
+        <file crc="3504998003" name="modules/locale/org-netbeans-modules-javafx2-platform_zh_CN.jar"/>
+        <file crc="869268579" name="modules/org-netbeans-modules-javafx2-platform.jar"/>
+    </module_version>
+</module>

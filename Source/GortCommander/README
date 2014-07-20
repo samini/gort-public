@@ -1,0 +1,37 @@
+Build and install on Android device.
+Attach the Android device via USB to a host.
+
+On the host run the following on commandline.
+Android SDK tools and platform tools have to be installed.
+
+adb forward tcp:38300 tcp:38300
+
+Then can telnet through localhost to send commands to device.
+
+telnet localhost 38300
+
+Some commands:
+package [appname]
+process [packagename]
+sourcedir [packagename]
+md5 [packagename]
+filesize [packagename]
+
+example:
+package yelp
+output: com.yelp.android
+
+process com.yelp.android
+output: com.yelp.android
+
+launchactivity com.yelp.android
+output: com.yelp.android/.ui.activities.RootActivity
+
+sourcedir com.yelp.android
+output: /data/app/com.yelp.android-1.apk
+
+md5 com.yelp.android
+output: 21f3f74ae393b5ec45344b5d2662c82
+
+filesize com.yelp.android
+output: 8662861

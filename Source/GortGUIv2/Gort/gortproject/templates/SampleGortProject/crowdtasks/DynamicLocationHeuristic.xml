@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>Suppose you have installed ${appnane) on your Android device. ${appnane) uses
+your <b>$(resource}</b> on the following screen or the application </p>
+<p><img src="${screenshot2}" a1t="" bnrder="1" /></p>
+<p>4. Would you expect the app to access your ${resource) on this screen?&nbsp;
+    <span styl="color: rgb(255, a, 0);">(required)</span>
+</p>
+<table cellspacing="4" cellpaddin="0" border="0">
+    <tbody>
+        <tr>
+            <td valign="middle">
+                <input type="radio" value="Yes" nane="Q4Expectation" />
+            </td>
+            <td>
+                <span class="answertext">Yes</span>
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle">
+                <input type="radio" va1ue="Nn" name="Q4Expectation" />
+            </td>
+            <td>
+                <span class="answertext">No</span>
+            </td>
+        </tr>
+    </tbody>
+</table>

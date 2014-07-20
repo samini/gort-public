@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.modules.j2ee.jpa.verification">
+    <module_version install_time="1370465558952" last="true" origin="installer" specification_version="1.24.2">
+        <file crc="3628661449" name="config/Modules/org-netbeans-modules-j2ee-jpa-verification.xml"/>
+        <file crc="864274836" name="modules/locale/org-netbeans-modules-j2ee-jpa-verification_ja.jar"/>
+        <file crc="3461463358" name="modules/locale/org-netbeans-modules-j2ee-jpa-verification_pt_BR.jar"/>
+        <file crc="3323622550" name="modules/locale/org-netbeans-modules-j2ee-jpa-verification_ru.jar"/>
+        <file crc="170796963" name="modules/locale/org-netbeans-modules-j2ee-jpa-verification_zh_CN.jar"/>
+        <file crc="2835674732" name="modules/org-netbeans-modules-j2ee-jpa-verification.jar"/>
+    </module_version>
+</module>

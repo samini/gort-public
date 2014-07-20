@@ -1,0 +1,24 @@
+The samples are from java-aws-mturk-1.6.2 and are only used as guidelines. They 
+may not build or create tasks without proper modifications to point them to 
+the right input, question, and properties files.
+
+Information on how to exclude workers from a batch:
+http://stackoverflow.com/questions/17077455/in-second-batch-exclude-workers-from-first-batch
+
+Information on how the samples are called:
+[echo] Run 'ant helloworld' to run the MTurkHelloWorld application.
+[echo] Run 'ant survey' to run the Simple Survey application.
+[echo] Run 'ant image' to run the Best Image application.  Use the optional ' -Dpreview=[preview file name]' parameter to preview.
+[echo] Run 'ant category' to run the Site Category application.
+[echo] Run 'ant reviewerForHIT -DhitID=[the HIT ID]' to run the Reviewer application.
+[echo] Run 'ant reviewerForHITFile -Dsuccess_file=[filename of .success file]' -Doutput_file=[filename of output file] to run the Reviewer application.
+[echo] Run 'ant filter' to run the MyHIT application which uses the AppendKeywordFilter.
+[echo] Run 'ant review-policy' to run the ReviewPolicy application.
+[echo] Run 'ant review-policy-results -DhitID=[the HIT ID]' to get review results.
+[echo] Run 'ant compile-sample' to compile the sample code.
+[echo] Run 'ant jar' to build the sdk sources and create jar.
+[echo] Run 'ant run-test' to run the junit tests for the sdk.
+[echo] Run 'ant doc' to create javadocs for the sdk and sample java sources.
+[echo] Run 'ant dist' to create the all distributables of the sdk.
+[echo] Run 'ant unix' to create the gzip distributable of the sdk for unix.
+[echo] Run 'ant windows' to create the zip distributable of the sdk for windows.

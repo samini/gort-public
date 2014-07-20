@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module codename="org.openide.modules">
+    <module_version install_time="1370463145655" last="false" origin="installer" specification_version="7.35.1">
+        <file crc="1391508081" name="config/ModuleAutoDeps/org-openide-modules.xml"/>
+        <file crc="1135858275" name="lib/locale/org-openide-modules_ja.jar"/>
+        <file crc="2875087812" name="lib/locale/org-openide-modules_pt_BR.jar"/>
+        <file crc="310874417" name="lib/locale/org-openide-modules_ru.jar"/>
+        <file crc="3803996375" name="lib/locale/org-openide-modules_zh_CN.jar"/>
+        <file crc="1308136892" name="lib/org-openide-modules.jar"/>
+    </module_version>
+    <module_version install_time="1374609696118" last="true" origin="Python Plugin" specification_version="7.39">
+        <file crc="1391508081" name="config/ModuleAutoDeps/org-openide-modules.xml"/>
+        <file crc="756556952" name="lib/org-openide-modules.jar"/>
+    </module_version>
+</module>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module codename="org.netbeans.libs.commons_net/2">
+    <module_version install_time="1370462369624" last="true" origin="installer" specification_version="2.9.1.31">
+        <file crc="1714611622" name="config/Modules/org-netbeans-libs-commons_net.xml"/>
+        <file crc="1987215567" name="modules/ext/commons-net-3.1.jar"/>
+        <file crc="1708185149" name="modules/locale/org-netbeans-libs-commons_net_ja.jar"/>
+        <file crc="4223229022" name="modules/locale/org-netbeans-libs-commons_net_pt_BR.jar"/>
+        <file crc="736018372" name="modules/locale/org-netbeans-libs-commons_net_ru.jar"/>
+        <file crc="1954916772" name="modules/locale/org-netbeans-libs-commons_net_zh_CN.jar"/>
+        <file crc="3340111772" name="modules/org-netbeans-libs-commons_net.jar"/>
+    </module_version>
+</module>

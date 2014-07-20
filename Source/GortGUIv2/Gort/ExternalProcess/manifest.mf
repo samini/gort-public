@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.cmuchimps.gort.modules.externalprocess
+OpenIDE-Module-Install: org/cmuchimps/gort/modules/externalprocess/Installer.class
+OpenIDE-Module-Localizing-Bundle: org/cmuchimps/gort/modules/externalprocess/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
