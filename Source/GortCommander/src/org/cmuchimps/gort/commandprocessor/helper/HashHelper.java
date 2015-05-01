@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -34,13 +35,8 @@ public class HashHelper {
 	        // Create MD5 Hash
 	        MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
 	        digest.update(b);
-	        byte messageDigest[] = digest.digest();
-	        
-	        // Create Hex String
-	        StringBuffer hexString = new StringBuffer();
-	        for (int i=0; i< messageDigest.length; i++)
-	            hexString.append(Integer.toHexString(0xFF & messageDigest[i]));
-	        return hexString.toString();
+	        BigInteger bi = new BigInteger(1, digest.digest());
+	        return String.format("%1$032X", bi);
 	        
 	    } catch (NoSuchAlgorithmException e) {
 	        e.printStackTrace();
@@ -70,19 +66,14 @@ public class HashHelper {
 			int len = 0;
 			
 			// Create MD5 Hash
-	        MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
+			MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
 			
 			while ((len = fileInputStream.read(buffer)) > 0) {
 				digest.update(buffer, 0, len);
 			}
 			
-			byte messageDigest[] = digest.digest();
-			
-			// Create Hex String
-	        StringBuffer hexString = new StringBuffer();
-	        for (int i=0; i< messageDigest.length; i++)
-	            hexString.append(Integer.toHexString(0xFF & messageDigest[i]));
-	        return hexString.toString();
+			BigInteger bi = new BigInteger(1, digest.digest());
+			return String.format("%1$032X", bi);
 			
 		} catch (NoSuchAlgorithmException e) {
 	        e.printStackTrace();
