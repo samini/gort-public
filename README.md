@@ -1,8 +1,8 @@
-#gort
+# gort
 
 The _gort-public_ repository contains the source code (v2) I wrote for my thesis, _Analyzing Mobile App Privacy Using Computation and Crowdsourcing_. The thesis document is available [here](http://cmuchimps.org/publications/analyzing_mobile_app_privacy_using_computation_and_crowdsourcin_2014 "Analyzing Mobile App Privacy Using Computation and Crowdsourcing").
 
-##Thesis Abstract
+## Thesis Abstract
 
 Mobile apps can make use of the rich data and sensors available on smartphones to offer compelling services. However, the use of sensitive resources by apps is not always justified, which has led to new kinds of privacy risks and challenges. While it is possible for app market owners and third-parties to analyze the privacy-related behaviors of apps, present approaches are difficult and tedious.
 
@@ -10,7 +10,7 @@ I present two iterations of the design, implementation, and evaluation of a syst
 
 This work offers three distinct new advances over the state of the art. First, Gort uses a set of heuristics, elicited through interviews with 12 experts, to identify potential app privacy problems. Gort heuristics present high-level privacy problems instead of the overwhelming amount of information offered through existing tools. Second, Gort automatically interacts with apps by discovering and interacting with UI elements while instrumenting app behavior. This eliminates the need for analysts to manually interact with apps or to script interactions. Third, Gort uses crowdsourcing in a novel way to determine whether app privacy leaks are legitimate and desirable and raises red flags about potentially suspicious app behavior. While existing tools can detect privacy leaks, they cannot determine whether the privacy leaks are beneficial or desirable to the user. Gort was evaluated through two separate user studies. The experiences from building Gort and the insights from the user studies guide the creation of future systems, especially systems intended for the inspection and analysis of software.
 
-##Building
+## Building
 
 This part of the documentation is currently a work in progress.
 
